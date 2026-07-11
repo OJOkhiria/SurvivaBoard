@@ -17,4 +17,17 @@ Because the board uses a variety of sensors, a GPS, a radio, and other noisy com
 
 **ILI9341:** This will be used to display all the information the board gathers, and potentially for users to use Meshtastic. Has an SD card interface for any fonts or other things, and a PWM backlight control. Has 0.1μF and 10μF decoupling capacitors and communicates with the ESP32 using SPI.
 
+# PCB Design
+I went with an 80mm by 120mm rectangular 4-layer with 5mm radius filleted edges, with the following designations:
+* Layer 1: Signals and USB power processing
+* Layer 2: Solid ground plane (with some unfilled areas for antenna clearance)
+* Layer 3: Bulk power distribution
+* Layer 4: Extra signals
+
+The subsystems are separated and clustered with their respective components to shorten routes and minimize noise interference, and some of these areas are demarcated with stitching vias. The display sits at the head of the board with the Ebyte module, I²C sensors, and a logo immediately underneath. Near the equator and to the left of the board sits the ESP32, with the antenna facing the board's edge and ~9mm of copper-free clearance on both sides of the antenna. On the right is a 25x25mm copper-free clearance zone to (hopefully) mount the Quectel YCGO011AA. In the bottom left is the MAX M10S with a U.FL coax connector, and in the bottom right is the USB-C receptacle and the power systems.
+
+# Bill of Materials
+
+
+
 

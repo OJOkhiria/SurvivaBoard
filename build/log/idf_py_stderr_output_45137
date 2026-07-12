@@ -1,0 +1,47 @@
+Command: cmake -G Ninja -B /Users/ojeifookhiria/Documents/PlatformIO/Projects/SurvivaBoard/build -DPYTHON_DEPS_CHECKED=1 -DPYTHON=/Users/ojeifookhiria/.espressif/tools/python/v6.0.2/venv/bin/python3 -DESP_PLATFORM=1 -DCCACHE_ENABLE=False /Users/ojeifookhiria/Documents/PlatformIO/Projects/SurvivaBoard
+CMake Error at /Users/ojeifookhiria/.espressif/v6.0.2/esp-idf/tools/cmake/build.cmake:697 (message):
+  Traceback (most recent call last):
+
+    File "<frozen runpy>", line 198, in _run_module_as_main
+    File "<frozen runpy>", line 88, in _run_code
+    File "/Users/ojeifookhiria/.espressif/tools/python/v6.0.2/venv/lib/python3.13/site-packages/idf_component_manager/prepare_components/__main__.py", line 4, in <module>
+      from .prepare import main
+    File "/Users/ojeifookhiria/.espressif/tools/python/v6.0.2/venv/lib/python3.13/site-packages/idf_component_manager/prepare_components/prepare.py", line 16, in <module>
+      from idf_component_manager.core import ComponentManager
+    File "/Users/ojeifookhiria/.espressif/tools/python/v6.0.2/venv/lib/python3.13/site-packages/idf_component_manager/core.py", line 24, in <module>
+      from idf_component_tools import ComponentManagerSettings, debug
+    File "/Users/ojeifookhiria/.espressif/tools/python/v6.0.2/venv/lib/python3.13/site-packages/idf_component_tools/__init__.py", line 19, in <module>
+      from idf_component_tools.environment import ComponentManagerSettings  # noqa: E402
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    File "/Users/ojeifookhiria/.espressif/tools/python/v6.0.2/venv/lib/python3.13/site-packages/idf_component_tools/environment.py", line 12, in <module>
+      from pydantic import AliasChoices, Field, computed_field, create_model, field_validator
+    File "/Users/ojeifookhiria/.espressif/tools/python/v6.0.2/venv/lib/python3.13/site-packages/pydantic/__init__.py", line 5, in <module>
+      from ._migration import getattr_migration
+    File "/Users/ojeifookhiria/.espressif/tools/python/v6.0.2/venv/lib/python3.13/site-packages/pydantic/_migration.py", line 4, in <module>
+      from pydantic.warnings import PydanticDeprecatedSince20
+    File "/Users/ojeifookhiria/.espressif/tools/python/v6.0.2/venv/lib/python3.13/site-packages/pydantic/warnings.py", line 5, in <module>
+      from .version import version_short
+    File "/Users/ojeifookhiria/.espressif/tools/python/v6.0.2/venv/lib/python3.13/site-packages/pydantic/version.py", line 7, in <module>
+      from pydantic_core import __version__ as __pydantic_core_version__
+    File "/Users/ojeifookhiria/.espressif/tools/python/v6.0.2/venv/lib/python3.13/site-packages/pydantic_core/__init__.py", line 8, in <module>
+      from ._pydantic_core import (
+      ...<21 lines>...
+      )
+
+  ImportError:
+  dlopen(/Users/ojeifookhiria/.espressif/tools/python/v6.0.2/venv/lib/python3.13/site-packages/pydantic_core/_pydantic_core.cpython-313-darwin.so,
+  0x0002): tried:
+  '/Users/ojeifookhiria/.espressif/tools/python/v6.0.2/venv/lib/python3.13/site-packages/pydantic_core/_pydantic_core.cpython-313-darwin.so'
+  (mach-o file, but is an incompatible architecture (have 'arm64', need
+  'x86_64')),
+  '/System/Volumes/Preboot/Cryptexes/OS/Users/ojeifookhiria/.espressif/tools/python/v6.0.2/venv/lib/python3.13/site-packages/pydantic_core/_pydantic_core.cpython-313-darwin.so'
+  (no such file),
+  '/Users/ojeifookhiria/.espressif/tools/python/v6.0.2/venv/lib/python3.13/site-packages/pydantic_core/_pydantic_core.cpython-313-darwin.so'
+  (mach-o file, but is an incompatible architecture (have 'arm64', need
+  'x86_64'))
+
+Call Stack (most recent call first):
+  /Users/ojeifookhiria/.espressif/v6.0.2/esp-idf/tools/cmake/project.cmake:773 (idf_build_process)
+  CMakeLists.txt:3 (project)
+
+

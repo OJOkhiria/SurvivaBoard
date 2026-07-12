@@ -1,0 +1,13 @@
+#pragma once
+
+#include <cstdint>
+
+namespace Settings
+{
+constexpr uint32_t I2C_SPEED = 400000;
+constexpr uint32_t SPI_SPEED_DISPLAY = 40000000;
+constexpr uint32_t SPI_SPEED_LORA = 8000000;
+constexpr uint32_t GPS_BAUD = 9600;
+constexpr uint32_t GPS_UART_RX_BUFFER_SIZE = 2048;
+constexpr uint32_t GPS_UART_TX_BUFFER_SIZE = 1024;
+}  // namespace Settings

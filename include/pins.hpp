@@ -1,10 +1,6 @@
 #pragma once
 
 #include "driver/gpio.h"
-#include "driver/i2c.h"
-#include "driver/spi_master.h"
-#include "driver/uart.h"
-
 namespace Pins
 {
     //==========================
@@ -27,6 +23,7 @@ namespace Pins
     //==========================
 
     constexpr gpio_num_t LORA_CS    = GPIO_NUM_7;
+    constexpr gpio_num_t LORA_RESET = GPIO_NUM_3;
     constexpr gpio_num_t LORA_TXEN  = GPIO_NUM_9;
     constexpr gpio_num_t LORA_RXEN  = GPIO_NUM_10;
     constexpr gpio_num_t LORA_BUSY  = GPIO_NUM_15;
@@ -59,8 +56,14 @@ namespace Pins
     constexpr gpio_num_t TFT_PWM  = GPIO_NUM_48;
 
     //==========================
-    // Buttons
+    // SD card (on the TFT module)
     //==========================
 
-    constexpr gpio_num_t RESET_BUTTON = GPIO_NUM_3;
+    constexpr gpio_num_t SD_CS = GPIO_NUM_13;
+
+    //==========================
+    // Magnetometer
+    //==========================
+
+    constexpr gpio_num_t MAG_INT = GPIO_NUM_38;
 }

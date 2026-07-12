@@ -11,3 +11,4 @@ namespace Buses
 
     constexpr uart_port_t GPS = UART_NUM_1;
 }
+#pragma once

@@ -26,7 +26,8 @@ esp_err_t initGps()
         return result;
     }
 
-    result = uart_set_pin(Buses::GPS, Pins::GPS_TX, Pins::GPS_RX,
+    result = uart_set_pin(Buses::GPS, board::pins::gps_tx,
+                          board::pins::gps_rx,
                           UART_PIN_NO_CHANGE, UART_PIN_NO_CHANGE);
     if (result != ESP_OK)
     {

@@ -8,8 +8,9 @@
 esp_err_t Display::begin()
 {
     const gpio_config_t control_pins = {
-        .pin_bit_mask = (1ULL << Pins::TFT_DC) | (1ULL << Pins::TFT_RST) |
-                        (1ULL << Pins::TFT_PWM),
+        .pin_bit_mask = (1ULL << board::pins::tft_dc) |
+                        (1ULL << board::pins::tft_rst) |
+                        (1ULL << board::pins::tft_pwm),
         .mode = GPIO_MODE_OUTPUT,
         .pull_up_en = GPIO_PULLUP_DISABLE,
         .pull_down_en = GPIO_PULLDOWN_DISABLE,
@@ -21,10 +22,11 @@ esp_err_t Display::begin()
         return result;
     }
 
-    gpio_set_level(Pins::TFT_DC, 1);
-    gpio_set_level(Pins::TFT_RST, 1);
-    gpio_set_level(Pins::TFT_PWM, 0);
+    gpio_set_level(board::pins::tft_dc, 1);
+    gpio_set_level(board::pins::tft_rst, 1);
+    // The CR2013-MI2120 module accepts a logic-high backlight-enable signal.
+    gpio_set_level(board::pins::tft_pwm, 1);
 
-    return HAL::SPI::addDevice(Settings::SPI_SPEED_DISPLAY, 7, Pins::TFT_CS,
-                               &device_);
+    return HAL::SPI::addDevice(Settings::SPI_SPEED_DISPLAY, 7,
+                               board::pins::tft_cs, &device_);
 }

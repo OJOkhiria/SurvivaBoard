@@ -20,8 +20,8 @@ esp_err_t init()
 
     const i2c_config_t config = {
         .mode = I2C_MODE_MASTER,
-        .sda_io_num = Pins::I2C_SDA,
-        .scl_io_num = Pins::I2C_SCL,
+        .sda_io_num = board::pins::i2c_sda,
+        .scl_io_num = board::pins::i2c_scl,
         .sda_pullup_en = GPIO_PULLUP_DISABLE,
         .scl_pullup_en = GPIO_PULLUP_DISABLE,
         .master = {.clk_speed = Settings::I2C_SPEED},

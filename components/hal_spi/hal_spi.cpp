@@ -18,9 +18,9 @@ esp_err_t init()
     }
 
     spi_bus_config_t config = {};
-    config.mosi_io_num = Pins::SPI_MOSI;
-    config.miso_io_num = Pins::SPI_MISO;
-    config.sclk_io_num = Pins::SPI_SCK;
+    config.mosi_io_num = board::pins::spi_mosi;
+    config.miso_io_num = board::pins::spi_miso;
+    config.sclk_io_num = board::pins::spi_sck;
     config.quadwp_io_num = GPIO_NUM_NC;
     config.quadhd_io_num = GPIO_NUM_NC;
     config.data4_io_num = GPIO_NUM_NC;

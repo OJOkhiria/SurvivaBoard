@@ -1,3 +1,4 @@
 {
-    "idf.currentSetup": "/Users/ojeifookhiria/.espressif/v6.0.2/esp-idf"
+    "idf.currentSetup": "/Users/ojeifookhiria/.espressif/v6.0.2/esp-idf",
+    "C_Cpp.default.compileCommands": "${workspaceFolder}/.pio/build/esp32-s3-devkitc-1-n16r8v/compile_commands.json"
 }

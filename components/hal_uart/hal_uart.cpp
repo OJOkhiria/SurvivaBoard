@@ -3,6 +3,7 @@
 #include "buses.hpp"
 #include "config.hpp"
 #include "driver/uart.h"
+#include "freertos/FreeRTOS.h"
 #include "pins.hpp"
 
 namespace HAL::UART

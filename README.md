@@ -70,3 +70,7 @@ The subsystems are separated and clustered with their respective components to s
 
 <img width="428" height="625" alt="Screenshot 2026-07-09 at 12 09 27 AM" src="https://github.com/user-attachments/assets/cbba426d-6cf8-4c08-8a19-a40d461bbf24" />
 
+<img width="980" height="595" alt="Screenshot 2026-07-13 at 2 32 15 PM" src="https://github.com/user-attachments/assets/b6032baf-47d7-43ea-ae01-a15fdbc49286" />
+
+<img width="999" height="625" alt="Screenshot 2026-07-13 at 2 34 44 PM" src="https://github.com/user-attachments/assets/75240ece-3a33-4b3a-90fb-c282075b48f0" />
+
